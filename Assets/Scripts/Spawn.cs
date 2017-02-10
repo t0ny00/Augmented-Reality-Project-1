@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Spawn : MonoBehaviour {
-    public GameObject enemy;
+    public GameObject[] enemy;
     public float spawn_time;
     public int max_waves = 1;
     public GameObject limit_left;
@@ -17,7 +17,6 @@ public class Spawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey("w")) Debug.Log("holaaa");
 	}
 
     void SpawnEnemy()
@@ -27,13 +26,25 @@ public class Spawn : MonoBehaviour {
         float height = limit_height.transform.position.y;
         int waves = Random.Range(0, max_waves);
         GameObject enemy_temp;
+        Vector3 spawnPosition;
+        int enemyNumber;
+
+        float prob = Random.value;
+
+        if (prob < 0.7) enemyNumber = 0;
+        else enemyNumber = 1;
         for (int i = 0; i <= waves; i++)
         {
-           
-            enemy_temp = (GameObject)Instantiate(enemy, new Vector3(transform.position.x + Random.Range(minX, maxX), 
-                                                 height, transform.position.z), new Quaternion(0,0,0,0),transform.parent);
+
+            if (enemyNumber == 0) spawnPosition.x = transform.position.x + Random.Range(minX, maxX);
+            else spawnPosition.x = transform.position.x + Random.Range(minX + 10, maxX - 10);
+            spawnPosition.y = height;
+            spawnPosition.z = limit_height.transform.position.z;
+
+
+            enemy_temp = (GameObject)Instantiate(enemy[enemyNumber], spawnPosition, new Quaternion(0,0,0,0),transform.parent);
             enemy_temp.layer = gameObject.layer;
-            
+            if (enemyNumber == 1) break;
         }
     }
 }

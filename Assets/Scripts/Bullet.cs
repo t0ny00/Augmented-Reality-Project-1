@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour {
     {
         if (col.gameObject.tag == "Enemy")
         {
-            col.gameObject.GetComponent<Enemy>().Damage();
+            //col.gameObject.GetComponent<Enemy>().Damage();
             Destroy(gameObject);
         }
         else if (col.gameObject.tag == "Respawn") Destroy(gameObject); 

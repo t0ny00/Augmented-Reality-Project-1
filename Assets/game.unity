@@ -134,14 +134,25 @@ Prefab:
       propertyPath: countText
       value: 
       objectReference: {fileID: 380862251}
-    - target: {fileID: 135000012071423658, guid: 633e853b632698d42bdf95e97682c421,
+    - target: {fileID: 114000010408342560, guid: 633e853b632698d42bdf95e97682c421,
         type: 2}
-      propertyPath: m_Material
+      propertyPath: lifeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 49162543}
+    - target: {fileID: 114000010408342560, guid: 633e853b632698d42bdf95e97682c421,
+        type: 2}
+      propertyPath: bulletCounterText
+      value: 
+      objectReference: {fileID: 1760774447}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 633e853b632698d42bdf95e97682c421, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &49162543 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010225633444, guid: 894180ca22a593f48a364acd536bbc21,
+    type: 2}
+  m_PrefabInternal: {fileID: 120690702}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &120690702
 Prefab:
   m_ObjectHideFlags: 0
@@ -244,7 +255,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!114 &380862251 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011682488858, guid: 894180ca22a593f48a364acd536bbc21,
+  m_PrefabParentObject: {fileID: 114000014246570068, guid: 894180ca22a593f48a364acd536bbc21,
     type: 2}
   m_PrefabInternal: {fileID: 120690702}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
@@ -460,6 +471,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1760774447 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011682488858, guid: 894180ca22a593f48a364acd536bbc21,
+    type: 2}
+  m_PrefabInternal: {fileID: 120690702}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &2121125096
 Prefab:
   m_ObjectHideFlags: 0
@@ -498,14 +515,6 @@ Prefab:
     - target: {fileID: 4000012743784610, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013307473668, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012489241986, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}

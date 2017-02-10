@@ -232,6 +232,10 @@ MonoBehaviour:
   invulnerable: 0
   fire_rate: 10
   speed: 50
+  numBullets: 15
+  lifeText: {fileID: 0}
+  bulletCounterText: {fileID: 0}
+  reloadSpeed: 5
 --- !u!114 &114000010713678090
 MonoBehaviour:
   m_ObjectHideFlags: 1

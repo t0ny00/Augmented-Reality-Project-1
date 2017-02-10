@@ -132,7 +132,7 @@ GameObject:
   - 65: {fileID: 65000010416379104}
   m_Layer: 0
   m_Name: Killzone (2)
-  m_TagString: Finish
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,7 @@ GameObject:
   - 65: {fileID: 65000010709374706}
   m_Layer: 0
   m_Name: Killzone (1)
-  m_TagString: Finish
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012489241986}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 28, y: -2, z: 0}
+  m_LocalPosition: {x: 29, y: -2, z: 0}
   m_LocalScale: {x: 1.0000012, y: 1, z: 1.0000012}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010380257396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.05, y: 0.27, z: 0}
+  m_LocalPosition: {x: -28, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -275,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011528101498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.97, y: 0.26999998, z: 0}
+  m_LocalPosition: {x: 28, y: 0.26999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -288,7 +288,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012727238512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.303, y: -2, z: 66.386}
+  m_LocalPosition: {x: 0.303, y: -2, z: 67.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -322,7 +322,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011888171666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -348,7 +348,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013307473668}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -28.3, y: -2, z: -0}
+  m_LocalPosition: {x: -29, y: -2, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
@@ -464,8 +464,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 56.030342, y: 4.706585, z: 1}
-  m_Center: {x: -0.073574066, y: 1.8532925, z: 0}
+  m_Size: {x: 56.030342, y: 4.706585, z: 1.6234207}
+  m_Center: {x: -0.073574066, y: 1.8532925, z: 0.31170654}
 --- !u!114 &114000012083040242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,7 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d6557b8a9baeb4386460040b8ead80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1000010793049272, guid: 537287ce6039f4b48bf468dbcfb0593d, type: 2}
+  enemy:
+  - {fileID: 1000010793049272, guid: 537287ce6039f4b48bf468dbcfb0593d, type: 2}
+  - {fileID: 1000012748573368, guid: dae820ebd464de6479afea5d27974eeb, type: 2}
   spawn_time: 1.5
   max_waves: 4
   limit_left: {fileID: 1000010380257396}

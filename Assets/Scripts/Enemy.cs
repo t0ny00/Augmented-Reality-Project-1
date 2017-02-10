@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
     private Rigidbody rb;
+    public bool invulnerable;
     public float speed = 1000;
     public GameObject bullet;
     public float health = 2;
@@ -11,13 +12,16 @@ public class Enemy : MonoBehaviour {
     public int scoreValue = 10;
     private Vector3 direction;
     public ParticleSystem explosion;
+    public bool randomDirection;
 
 	// Use this for initialization
 	void Start () {
         if (arOrientation) direction = Vector3.down;
-        else direction = Vector3.back + new Vector3(Random.Range(-1,1),0,0);
+        else direction = Vector3.back;
+        if (randomDirection) direction += new Vector3(Random.Range(-0.5f, 0.5f), 0, 0);
         rb = GetComponent<Rigidbody>();
         rb.AddForce(direction * speed);
+
     }
 	 
 	// Update is called once per frame
@@ -28,15 +32,15 @@ public class Enemy : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Finish" || col.gameObject.tag == "Player") Die(false);
-        else if (col.gameObject.tag == "Bullet") Damage();
+        else if ((col.gameObject.tag == "Bullet") && !invulnerable) Damage();
     }
 
     void Die(bool diedByPlayer)
     {
-        GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
-        if (diedByPlayer) player.GetComponent<PlayerScore>().increaseScore(scoreValue);
+        GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+        if (diedByPlayer && player.Length > 0) player[0].GetComponent<PlayerScore>().increaseScore(scoreValue);
         ParticleSystem tempExplosion =  (ParticleSystem)Instantiate(explosion,transform.position,Quaternion.identity);
-        Destroy(tempExplosion, tempExplosion.duration);
+        //Destroy(tempExplosion, tempExplosion.duration);
         Destroy(gameObject);
     }
 

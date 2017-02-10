@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
@@ -11,28 +12,42 @@ public class PlayerController : MonoBehaviour {
     public int fire_rate = 10;
     private int fire_timer = 0;
     public float speed = 50f;
-
+    public int numBullets = 15;
+    private int bulletCounter;
+    public Text lifeText;
+    public Text bulletCounterText;
+    public float reloadSpeed = 5;
+    private float timeSinceLastShot;
 	// Use this for initialization
 	void Start () {
         render = GetComponent<Renderer>();
-	}
+        bulletCounter = numBullets;
+        lifeText.text = "Lifes: " + health.ToString();
+        bulletCounterText.text = "Bullets: " + bulletCounter.ToString();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         var x = Input.GetAxis("Horizontal") * Time.deltaTime *speed;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        transform.Translate(x, 0, z);
+
 
         if (Input.GetKey("space"))
         {
-            if (fire_timer >= fire_rate)
+            if (fire_timer >= fire_rate && bulletCounter > 0) 
             {
                 Shoot();
                 fire_timer = 0;
+                bulletCounter--;
+                bulletCounterText.text = "Bullets: " + bulletCounter.ToString();
+                timeSinceLastShot = Time.time;
             }
+            else if (bulletCounter == 0) StartCoroutine("Reload",reloadSpeed);
         }
 
-        transform.Translate(x, 0, z);
+        if (Time.time - timeSinceLastShot > 1.5 && bulletCounter > 0) StartCoroutine("Reload", 0);
 
         fire_timer++;
         if (fire_timer == fire_rate + 1) fire_timer = 0;
@@ -43,6 +58,7 @@ public class PlayerController : MonoBehaviour {
         if (col.gameObject.tag == "Enemy" && !invulnerable)
         {
             health--;
+            lifeText.text = "Lifes: " + health.ToString();
             invulnerable = true;
             if (health == 0) Die();
             else
@@ -78,5 +94,11 @@ public class PlayerController : MonoBehaviour {
         }
         invulnerable = false;
         GetComponent<Collider>().enabled = true;
+    }
+    IEnumerator Reload(float reloadSpeed)
+    {
+        yield return new WaitForSecondsRealtime(reloadSpeed);
+        bulletCounter = numBullets;
+        bulletCounterText.text = "Bullets: " + bulletCounter.ToString();
     }
 }
