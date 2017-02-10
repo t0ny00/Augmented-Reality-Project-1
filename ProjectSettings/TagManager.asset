@@ -8,6 +8,10 @@ TagManager:
   - Character
   - Glove
   - Target
+  - MegaHit
+  - Controller
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

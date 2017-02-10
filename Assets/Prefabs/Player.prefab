@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000010251863414}
   - 33: {fileID: 33000014220266206}
   - 23: {fileID: 23000011941433962}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: CannonLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,8 @@ GameObject:
   - 135: {fileID: 135000012071423658}
   - 23: {fileID: 23000010621634890}
   - 114: {fileID: 114000010408342560}
-  m_Layer: 0
+  - 114: {fileID: 114000010713678090}
+  m_Layer: 4
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -57,7 +58,7 @@ GameObject:
   - 4: {fileID: 4000011749389954}
   - 33: {fileID: 33000014224839636}
   - 23: {fileID: 23000010108732176}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: CannonRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,8 +98,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013529892680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -5.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: -6.0923}
+  m_LocalScale: {x: 5.8771944, y: 5.8771944, z: 5.8771944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010251863414}
@@ -228,6 +229,22 @@ MonoBehaviour:
   cannon1: {fileID: 1000011985628532}
   cannon2: {fileID: 1000014183276656}
   bullet: {fileID: 1000013157434934, guid: 2bc51911001bd044b907963b4543ca83, type: 2}
+  invulnerable: 0
+  fire_rate: 10
+  speed: 50
+--- !u!114 &114000010713678090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013529892680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586fe8d8e893922438dabd011aa95705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 0}
+  myCanvas: {fileID: 0}
 --- !u!135 &135000012071423658
 SphereCollider:
   m_ObjectHideFlags: 1

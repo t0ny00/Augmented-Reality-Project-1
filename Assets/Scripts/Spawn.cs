@@ -22,13 +22,16 @@ public class Spawn : MonoBehaviour {
 
     void SpawnEnemy()
     {
+        float minX = limit_left.transform.position.x;
+        float maxX = limit_right.transform.position.x;
+        float height = limit_height.transform.position.y;
         int waves = Random.Range(0, max_waves);
         GameObject enemy_temp;
         for (int i = 0; i <= waves; i++)
         {
            
-            enemy_temp = (GameObject)Instantiate(enemy, new Vector3(transform.position.x + Random.Range(limit_left.transform.position.x, limit_right.transform.position.x), 
-                                                 limit_height.transform.position.y, transform.position.z), new Quaternion(0,0,0,0),transform.parent);
+            enemy_temp = (GameObject)Instantiate(enemy, new Vector3(transform.position.x + Random.Range(minX, maxX), 
+                                                 height, transform.position.z), new Quaternion(0,0,0,0),transform.parent);
             enemy_temp.layer = gameObject.layer;
             
         }
