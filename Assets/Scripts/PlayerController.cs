@@ -18,12 +18,17 @@ public class PlayerController : MonoBehaviour {
     public Text bulletCounterText;
     public float reloadSpeed = 5;
     private float timeSinceLastShot;
-	// Use this for initialization
-	void Start () {
+    public AudioSource sound;
+    public AudioSource soundExplosion;
+    public ParticleSystem leftFlame;
+    public ParticleSystem rightFlame;
+    // Use this for initialization
+    void Start () {
         render = GetComponent<Renderer>();
         bulletCounter = numBullets;
         lifeText.text = "Lifes: " + health.ToString();
         bulletCounterText.text = "Bullets: " + bulletCounter.ToString();
+        
     }
 	
 	// Update is called once per frame
@@ -58,6 +63,7 @@ public class PlayerController : MonoBehaviour {
         if (col.gameObject.tag == "Enemy" && !invulnerable)
         {
             health--;
+            soundExplosion.Play();
             lifeText.text = "Lifes: " + health.ToString();
             invulnerable = true;
             if (health == 0) Die();
@@ -79,17 +85,24 @@ public class PlayerController : MonoBehaviour {
     {
         Instantiate(bullet, cannon1.transform.position,new  Quaternion(0,0,0,0),transform.parent);
         Instantiate(bullet, cannon2.transform.position, new Quaternion(0, 0, 0, 0), transform.parent);
+        sound.Play();
         
     }
 
     IEnumerator Flash()
     {
         GetComponent<Collider>().enabled = false;
+        Renderer renderFlame1 =  leftFlame.GetComponent<Renderer>();
+        Renderer renderFlame2 = rightFlame.GetComponent<Renderer>();
         for (int i = 0; i < 5; i++)
         {
             render.enabled = false;
+            renderFlame1.enabled = false;
+            renderFlame2.enabled = false;
             yield return new WaitForSecondsRealtime(0.3f);
             render.enabled = true;
+            renderFlame1.enabled = true;
+            renderFlame2.enabled = true;
             yield return new WaitForSecondsRealtime(0.3f);
         }
         invulnerable = false;

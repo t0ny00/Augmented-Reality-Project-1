@@ -23,7 +23,7 @@ public class Spawn : MonoBehaviour {
     {
         float minX = limit_left.transform.position.x;
         float maxX = limit_right.transform.position.x;
-        float height = limit_height.transform.position.y;
+        float height = limit_height.transform.TransformPoint( transform.position).y;
         int waves = Random.Range(0, max_waves);
         GameObject enemy_temp;
         Vector3 spawnPosition;
@@ -31,8 +31,10 @@ public class Spawn : MonoBehaviour {
 
         float prob = Random.value;
 
-        if (prob < 0.7) enemyNumber = 0;
-        else enemyNumber = 1;
+        if (prob < 0.5) enemyNumber = 0;
+        else if (prob < 0.7) enemyNumber = 1;
+        else enemyNumber = 2;
+
         for (int i = 0; i <= waves; i++)
         {
 

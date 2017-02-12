@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
     private Vector3 direction;
     public ParticleSystem explosion;
     public bool randomDirection;
+  
 
 	// Use this for initialization
 	void Start () {

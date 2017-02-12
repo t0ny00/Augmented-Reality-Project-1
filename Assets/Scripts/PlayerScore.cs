@@ -7,8 +7,8 @@ public class PlayerScore : MonoBehaviour {
 
     private int score = 0;
     public Text countText;
-    public GameObject myCanvas;
-    
+    public AudioSource soundExplosion;
+
 
     // Use this for initialization
     void Start () {
@@ -23,6 +23,7 @@ public class PlayerScore : MonoBehaviour {
     public void increaseScore(int value)
     {
         score += value;
+        soundExplosion.Play();
         countText.text = "Score: " + score.ToString();
     }
 }
