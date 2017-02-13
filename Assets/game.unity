@@ -246,11 +246,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010618759732, guid: dc6a4c2c3ba230143beff36ff63c58a7,
-        type: 2}
-      propertyPath: countText
-      value: 
-      objectReference: {fileID: 380862251}
     - target: {fileID: 114000012817209186, guid: dc6a4c2c3ba230143beff36ff63c58a7,
         type: 2}
       propertyPath: lifeText
@@ -261,6 +256,11 @@ Prefab:
       propertyPath: bulletCounterText
       value: 
       objectReference: {fileID: 1760774447}
+    - target: {fileID: 114000010618759732, guid: dc6a4c2c3ba230143beff36ff63c58a7,
+        type: 2}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 380862251}
     - target: {fileID: 1000010161318822, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
       propertyPath: m_Name
       value: Player

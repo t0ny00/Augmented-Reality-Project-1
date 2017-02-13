@@ -38,10 +38,11 @@ public class Spawn : MonoBehaviour {
         for (int i = 0; i <= waves; i++)
         {
 
-            if (enemyNumber == 0) spawnPosition.x = transform.position.x + Random.Range(minX, maxX);
-            else spawnPosition.x = transform.position.x + Random.Range(minX + 10, maxX - 10);
+            if (enemyNumber == 0 || enemyNumber == 2) spawnPosition.x = transform.position.x + Random.Range(minX, maxX);
+            else spawnPosition.x = transform.position.x + Random.Range(minX + transform.TransformPoint(-0.5f,0f,0f).x, maxX - transform.TransformPoint(0.5f, 0f, 0f).x);
             spawnPosition.y = height;
             spawnPosition.z = limit_height.transform.position.z;
+            //if (enemyNumber == 0) spawnPosition.y -= transform.TransformPoint(1f, 0f, 0f).x ; 
 
 
             enemy_temp = (GameObject)Instantiate(enemy[enemyNumber], spawnPosition, new Quaternion(0,0,0,0),transform.parent);

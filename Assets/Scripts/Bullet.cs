@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour {
 
     public float speed;
     private Rigidbody rb;
-    
+    public bool ArOrientation; 
 
 	// Use this for initialization
 	void Start () {

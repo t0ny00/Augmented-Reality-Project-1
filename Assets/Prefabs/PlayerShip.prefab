@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012266588060}
   - 82: {fileID: 82000011369105476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sound Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012203629336}
   - 82: {fileID: 82000012551274008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sound Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,11 +53,10 @@ GameObject:
   - 4: {fileID: 4000012963206212}
   - 33: {fileID: 33000010508041338}
   - 23: {fileID: 23000011196590988}
-  - 95: {fileID: 95000012289750428}
   - 64: {fileID: 64000012973493028}
   - 114: {fileID: 114000010618759732}
   - 114: {fileID: 114000012817209186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -74,7 +73,7 @@ GameObject:
   - 4: {fileID: 4000010898236812}
   - 198: {fileID: 198000013040764456}
   - 199: {fileID: 199000014202122360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +90,7 @@ GameObject:
   - 4: {fileID: 4000012583604444}
   - 33: {fileID: 33000011770696836}
   - 23: {fileID: 23000012458088564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cannon Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +107,7 @@ GameObject:
   - 4: {fileID: 4000013028942122}
   - 198: {fileID: 198000012836033414}
   - 199: {fileID: 199000014072255362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +124,7 @@ GameObject:
   - 4: {fileID: 4000010361186096}
   - 33: {fileID: 33000011586315048}
   - 23: {fileID: 23000011733702878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cannon Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 1000011019524210}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: -0.00000016292068}
   m_LocalPosition: {x: 2.51, y: 5.3, z: -5.9900002}
-  m_LocalScale: {x: 2.2222223, y: 2.2222223, z: 2.2222223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 360, y: -180, z: -180}
   m_Children: []
   m_Father: {fileID: 4000012963206212}
@@ -165,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010017916090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: 0}
+  m_LocalPosition: {x: 0, y: 5.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -203,10 +202,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010161318822}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.59, z: 0}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0.0010656, y: -0.0056, z: -0.015}
+  m_LocalScale: {x: 0.0024268122, y: 0.0024268127, z: 0.0024268127}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012583604444}
   - {fileID: 4000010361186096}
@@ -224,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 1000011859887566}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: -0.00000016292068}
   m_LocalPosition: {x: -2.41, y: 5.3, z: -5.99}
-  m_LocalScale: {x: 2.2222223, y: 2.2222223, z: 2.2222223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 360, y: -180, z: -180}
   m_Children: []
   m_Father: {fileID: 4000012963206212}
@@ -501,23 +500,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95000012289750428
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010161318822}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: 51633481b774d5c47967d2447796737f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010618759732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -548,8 +530,8 @@ MonoBehaviour:
   bullet: {fileID: 1000013157434934, guid: 2bc51911001bd044b907963b4543ca83, type: 2}
   invulnerable: 0
   fire_rate: 10
-  speed: 50
-  numBullets: 15
+  speed: 0.05
+  numBullets: 10
   lifeText: {fileID: 0}
   bulletCounterText: {fileID: 0}
   reloadSpeed: 5
@@ -606,8 +588,8 @@ ParticleSystem:
   playOnAwake: 1
   moveWithTransform: 1
   autoRandomSeed: 1
-  scalingMode: 2
-  randomSeed: 54826391
+  scalingMode: 0
+  randomSeed: 1473986406
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -2350,8 +2332,8 @@ ParticleSystem:
   playOnAwake: 1
   moveWithTransform: 1
   autoRandomSeed: 1
-  scalingMode: 2
-  randomSeed: 809460818
+  scalingMode: 0
+  randomSeed: 764178400
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -4067,7 +4049,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedWireframeHidden: 1
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89

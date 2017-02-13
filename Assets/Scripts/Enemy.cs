@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour {
     {
         GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
         if (diedByPlayer && player.Length > 0) player[0].GetComponent<PlayerScore>().increaseScore(scoreValue);
-        ParticleSystem tempExplosion =  (ParticleSystem)Instantiate(explosion,transform.position,Quaternion.identity);
+        ParticleSystem tempExplosion =  (ParticleSystem)Instantiate(explosion,transform.position,Quaternion.identity,transform.parent);
         //Destroy(tempExplosion, tempExplosion.duration);
         Destroy(gameObject);
     }

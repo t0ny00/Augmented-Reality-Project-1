@@ -83,8 +83,9 @@ public class PlayerController : MonoBehaviour {
 
     void Shoot()
     {
-        Instantiate(bullet, cannon1.transform.position,new  Quaternion(0,0,0,0),transform.parent);
-        Instantiate(bullet, cannon2.transform.position, new Quaternion(0, 0, 0, 0), transform.parent);
+        Transform parent = GameObject.FindGameObjectsWithTag("Floor")[0].transform;
+        Instantiate(bullet, cannon1.transform.position,new  Quaternion(0,0,0,0),parent);
+        Instantiate(bullet, cannon2.transform.position, new Quaternion(0, 0, 0, 0), parent);
         sound.Play();
         
     }

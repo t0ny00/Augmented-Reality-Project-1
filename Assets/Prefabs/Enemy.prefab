@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000010589769260}
   - 54: {fileID: 54000011729912118}
   - 114: {fileID: 114000012199225336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65000010627269000
 BoxCollider:
@@ -119,10 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnerable: 0
-  speed: 1500
+  speed: 10
   bullet: {fileID: 0}
   health: 1
-  arOrientation: 0
+  arOrientation: 1
   scoreValue: 10
   explosion: {fileID: 19800000, guid: 3c1f0555cc3fd4e1d87382fbaa007f8f, type: 2}
   randomDirection: 1

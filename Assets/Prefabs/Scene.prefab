@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010491830240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LimitLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014138522506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   - 33: {fileID: 33000012895110766}
   - 64: {fileID: 64000010609124228}
   - 23: {fileID: 23000010737458826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,9 +67,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012743784610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Scene
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011163831214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LimitRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - 4: {fileID: 4000010855334930}
   - 198: {fileID: 198000012007642832}
   - 199: {fileID: 199000011185685002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stars 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013279567744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LimitHeight
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010159001438}
   - 65: {fileID: 65000010416379104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Killzone (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - 4: {fileID: 4000011722984162}
   - 65: {fileID: 65000012284530954}
   - 114: {fileID: 114000012083040242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013593378738}
   - 65: {fileID: 65000010709374706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Killzone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013357546756}
   - 65: {fileID: 65000011089435930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Killzone
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   - 4: {fileID: 4000010013317256}
   - 198: {fileID: 198000012687994148}
   - 199: {fileID: 199000013316639312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stars 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,10 +319,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011444749744}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0074925, y: -0.049428, z: -0.010937}
+  m_LocalScale: {x: 0.015862685, y: 0.015862688, z: 0.015862688}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011722984162}
   - {fileID: 4000014138522506}
@@ -352,7 +352,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011888171666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: -4}
+  m_LocalPosition: {x: 0, y: 3, z: -5.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -492,7 +492,7 @@ BoxCollider:
   m_GameObject: {fileID: 1000012727238512}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 56.030342, y: 4.706585, z: 1.6234207}
   m_Center: {x: -0.073574066, y: 1.8532925, z: 0.31170654}
@@ -585,8 +585,8 @@ MonoBehaviour:
   - {fileID: 1000013482107526, guid: 3af173fe39fe44549825ca5f9314ea73, type: 2}
   - {fileID: 1000012748573368, guid: dae820ebd464de6479afea5d27974eeb, type: 2}
   - {fileID: 1000010793049272, guid: 537287ce6039f4b48bf468dbcfb0593d, type: 2}
-  spawn_time: 1.5
-  max_waves: 4
+  spawn_time: 1.2
+  max_waves: 5
   limit_left: {fileID: 1000010380257396}
   limit_right: {fileID: 1000011528101498}
   limit_height: {fileID: 1000011888171666}
@@ -640,7 +640,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 0
-  randomSeed: 660934258
+  randomSeed: 592211982
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -680,7 +680,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 3
+      scalar: 15
       maxCurve:
         serializedVersion: 2
         m_Curve:
