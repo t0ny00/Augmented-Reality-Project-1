@@ -103,7 +103,7 @@ GameObject:
   - 92: {fileID: 145933057}
   - 81: {fileID: 145933056}
   - 114: {fileID: 145933055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145933053}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3.75, z: -0.07}
+  m_LocalPosition: {x: 0, y: 0.191, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
@@ -179,7 +179,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.2
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -224,7 +224,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children:
-  - {fileID: 1909080205}
   - {fileID: 214670344}
   m_Father: {fileID: 1308258685}
   m_RootOrder: 1
@@ -239,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02d1ce5da0c446acaea956b6ae07690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visible: 0
   secondsToRemainVisible: 1
   eventReceiver: {fileID: 0}
   _markerTag: hiro
@@ -259,6 +259,51 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1089955674}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &591990906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 591990907}
+  - 114: {fileID: 591990908}
+  m_Layer: 8
+  m_Name: Marker2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591990907
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591990906}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1909080205}
+  m_Father: {fileID: 1308258685}
+  m_RootOrder: 2
+--- !u!114 &591990908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591990906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02d1ce5da0c446acaea956b6ae07690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visible: 0
+  secondsToRemainVisible: 1
+  eventReceiver: {fileID: 0}
+  _markerTag: kanji
 --- !u!1001 &1089955674
 Prefab:
   m_ObjectHideFlags: 0
@@ -377,11 +422,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012743784610, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.049428
+      value: -0.1786
       objectReference: {fileID: 0}
     - target: {fileID: 4000012743784610, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.010937
+      value: 0.121
       objectReference: {fileID: 0}
     - target: {fileID: 4000012743784610, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
       propertyPath: m_LocalRotation.x
@@ -401,17 +446,52 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012743784610, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012007642832, guid: 2853fc0bbd7f98e48a75a15b4a712060,
+        type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 78.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012007642832, guid: 2853fc0bbd7f98e48a75a15b4a712060,
+        type: 2}
+      propertyPath: randomSeed
+      value: -2063717700
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012007642832, guid: 2853fc0bbd7f98e48a75a15b4a712060,
+        type: 2}
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012687994148, guid: 2853fc0bbd7f98e48a75a15b4a712060,
+        type: 2}
+      propertyPath: randomSeed
+      value: 1914927752
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012687994148, guid: 2853fc0bbd7f98e48a75a15b4a712060,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012687994148, guid: 2853fc0bbd7f98e48a75a15b4a712060,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012687994148, guid: 2853fc0bbd7f98e48a75a15b4a712060,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2853fc0bbd7f98e48a75a15b4a712060, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1290667133
+--- !u!1001 &1289697945
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 182698448}
+    m_TransformParent: {fileID: 591990907}
     m_Modifications:
     - target: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
       propertyPath: m_LocalPosition.x
@@ -419,11 +499,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.0087503
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.023691
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
       propertyPath: m_LocalRotation.x
@@ -445,6 +525,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010618759732, guid: dc6a4c2c3ba230143beff36ff63c58a7,
+        type: 2}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 1640580453}
     - target: {fileID: 114000012817209186, guid: dc6a4c2c3ba230143beff36ff63c58a7,
         type: 2}
       propertyPath: lifeText
@@ -455,33 +540,11 @@ Prefab:
       propertyPath: bulletCounterText
       value: 
       objectReference: {fileID: 191640187}
-    - target: {fileID: 114000010618759732, guid: dc6a4c2c3ba230143beff36ff63c58a7,
+    - target: {fileID: 114000012817209186, guid: dc6a4c2c3ba230143beff36ff63c58a7,
         type: 2}
-      propertyPath: countText
+      propertyPath: mark
       value: 
-      objectReference: {fileID: 1640580453}
-    - target: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.006306667
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.0063066646
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.0063066646
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012817209186, guid: dc6a4c2c3ba230143beff36ff63c58a7,
-        type: 2}
-      propertyPath: speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012817209186, guid: dc6a4c2c3ba230143beff36ff63c58a7,
-        type: 2}
-      propertyPath: health
-      value: 50
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1457039600}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc6a4c2c3ba230143beff36ff63c58a7, type: 2}
   m_IsPrefabParent: 0
@@ -494,7 +557,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1308258685}
   - 114: {fileID: 1308258686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SceneRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,6 +577,8 @@ Transform:
   m_Children:
   - {fileID: 145933054}
   - {fileID: 182698448}
+  - {fileID: 591990907}
+  - {fileID: 1457039602}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &1308258686
@@ -529,6 +594,121 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   findMarkerTags: []
   _findMarkerMode: 0
+--- !u!1001 &1441932846
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1457039602}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000000014901
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0016
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0063389
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.027960192
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.027960198
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.027960198
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 95c0da2f43d0f984c83e6a95434de7b8, type: 2}
+    - target: {fileID: 100000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1441932847 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 3d45ff711612079479dd98b301cdb67c, type: 3}
+  m_PrefabInternal: {fileID: 1441932846}
+--- !u!1 &1457039600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1457039602}
+  - 114: {fileID: 1457039601}
+  m_Layer: 8
+  m_Name: Marker3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1457039601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457039600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02d1ce5da0c446acaea956b6ae07690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visible: 0
+  secondsToRemainVisible: 1
+  eventReceiver: {fileID: 0}
+  _markerTag: player1
+--- !u!4 &1457039602
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457039600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2201, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1441932847}
+  m_Father: {fileID: 1308258685}
+  m_RootOrder: 3
 --- !u!1 &1520641842
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +782,9 @@ GameObject:
   - 4: {fileID: 1580157368}
   - 114: {fileID: 1580157367}
   - 114: {fileID: 1580157366}
+  - 114: {fileID: 1580157369}
+  - 114: {fileID: 1580157370}
+  - 114: {fileID: 1580157371}
   m_Layer: 0
   m_Name: ARToolKit
   m_TagString: Untagged
@@ -622,7 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MarkerType: 0
   Tag: hiro
-  PatternFilenameIndex: 0
+  PatternFilenameIndex: 2
   PatternFilename: patt.hiro
   PatternContents: " 234 235 240 233 240 234 240 235 240 237 240 238 240 240 240 232\n
     229 240 240 240 240 240 240 240 240 240 240 240 240 240 240 228\n 227 240 240
@@ -801,6 +984,445 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1580157365}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4ec33cee90c844ea1bcc2cd642033e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNativeGLTexturingIfAvailable: 1
+  AllowNonRGBVideo: 0
+  QuitOnEscOrBack: 1
+  AutoStartAR: 1
+  videoCParamName0: camera_para
+  videoConfigurationWindows0: '-showFormats  -device=WinMF -devNum=2 '
+  videoConfigurationMacOSX0: -width=640 -height=480
+  videoConfigurationiOS0: 
+  videoConfigurationAndroid0: 
+  videoConfigurationWindowsStore0: 
+  videoConfigurationLinux0: 
+  BackgroundLayer0: 0
+  VideoIsStereo: 0
+  transL2RName: transL2R
+  videoCParamName1: camera_paraR
+  videoConfigurationWindows1: -devNum=2 -showDialog -flipV
+  videoConfigurationMacOSX1: -source=1 -width=640 -height=480
+  videoConfigurationiOS1: 
+  videoConfigurationAndroid1: 
+  videoConfigurationWindowsStore1: -device=WinMC -format=BGRA
+  videoConfigurationLinux1: 
+  BackgroundLayer1: 9
+  NearPlane: 0.01
+  FarPlane: 5
+  ContentRotate90: 0
+  ContentFlipH: 0
+  ContentFlipV: 0
+  ContentAlign: 4
+  currentContentMode: 1
+  currentThresholdMode: 0
+  currentThreshold: 100
+  currentLabelingMode: 1
+  currentTemplateSize: 16
+  currentTemplateCountMax: 25
+  currentBorderSize: 0.25
+  currentPatternDetectionMode: 0
+  currentMatrixCodeType: 3
+  currentImageProcMode: 0
+  currentUseVideoBackground: 1
+  currentNFTMultiMode: 0
+  currentLogLevel: 1
+  scrollPosition: {x: 0, y: 0}
+--- !u!4 &1580157368
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580157365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!114 &1580157369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580157365}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed68815202b64d4c956d71c0f176088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkerType: 0
+  Tag: player1
+  PatternFilenameIndex: 4
+  PatternFilename: patt.player1
+  PatternContents: "  94 105 104 105 108 107 106 106 102  96  97  97  96  98  97  89\r\n
+    104 109 112 113 112 113 108  81  97 103 104 104 104 105 106  91\r\n 106 111 111
+    110 110 111 107  45  69 103 102 107 105 104 108  98\r\n 106 112 115 117 113 115
+    \ 82  32  42 102 104 106 105 107 108  96\r\n 106 113 114 110 108  98  42  37  29
+    \ 52 103 106 107 107 107  96\r\n 100 106 108  96  90  42  32  88  60  32  77  78
+    104 108 109  93\r\n 103 106 103  54  44  36  27  98  61  35  34  33  98 108 106
+    \ 87\r\n 101 102 102  38  35  33  30  45  36  29  29  32  75 105 109  85\r\n  96
+    \ 99  71  34  33  29  30  33  31  30  29  31  47  98 108  88\r\n 105  72  36  31
+    \ 30  31  30  31  31  30  30  33  30  54 103  91\r\n 100  40  35  34  28  33  33
+    \ 34  30  32  26  32  32  29  98  94\r\n 111  51  32  29  25  32  36  32  32  36
+    \ 25  30  32  39 107  89\r\n 110  97  40  68  99 106  67  32  57  99  88  68  46
+    \ 93 107  86\r\n 106 114 112 109 113  92  59  41  52  87 104 109 109 111 112  91\r\n
+    100 110 109 112 113 108 112 108 105 104 109 109 111 113 113  85\r\n  72  71  71
+    \ 78  81  85  90  85  81  82  80  81  81  85  84  69\r\n 131 143 147 146 146 147
+    150 148 137 135 133 132 131 137 136 128\r\n 135 145 145 147 149 148 149 106 125
+    136 135 133 132 135 136 122\r\n 135 142 143 144 146 147 144  56  88 135 133 133
+    133 138 137 130\r\n 137 141 144 143 145 148 107  37  50 128 135 135 136 136 138
+    129\r\n 134 140 142 145 145 127  41  40  34  62 130 135 136 138 139 125\r\n 134
+    138 140 131 118  49  32 114  71  32  89  97 135 136 141 120\r\n 129 136 139  70
+    \ 40  31  28 122  75  30  33  33 118 135 139 115\r\n 129 133 132  42  32  29  30
+    \ 54  38  30  30  31  93 134 136 111\r\n 130 133  89  34  30  30  29  29  29  30
+    \ 29  30  52 128 135 111\r\n 136  89  35  32  29  30  30  30  29  28  28  29  31
+    \ 62 131 115\r\n 132  43  33  31  32  30  29  29  28  28  28  30  30  29 119 113\r\n
+    144  60  33  33  28  34  39  30  31  41  28  30  31  47 135 108\r\n 137 121  44
+    \ 85 126 141  84  34  67 122 107  80  51 113 136 106\r\n 132 134 138 139 143 118
+    \ 70  39  57 103 134 137 135 136 137 109\r\n 124 130 135 138 140 139 142 132 136
+    127 133 134 135 137 137 107\r\n  81  86  87  91  97 103 109 102  97  98  94  93
+    \ 93 100 102  79\r\n 145 162 167 172 174 174 178 169 161 156 153 153 152 156 157
+    146\r\n 150 164 169 171 174 175 173 124 142 157 157 156 156 160 164 141\r\n 153
+    165 170 168 172 174 165  69 100 159 155 157 158 158 163 149\r\n 153 163 167 171
+    174 175 122  45  59 143 157 160 161 161 163 148\r\n 151 158 166 168 168 145  54
+    \ 53  45  74 149 155 156 161 164 144\r\n 151 161 164 149 131  60  44 131  88  43
+    101 111 152 161 166 141\r\n 148 158 160  84  53  41  41 138  89  41  43  45 135
+    158 165 136\r\n 146 152 145  52  43  41  41  65  48  37  37  41 106 156 164 132\r\n
+    148 150 102  41  41  38  39  39  38  35  37  40  65 142 161 132\r\n 154 101  44
+    \ 40  39  40  38  39  40  38  39  41  42  77 150 135\r\n 147  54  41  42  43  43
+    \ 41  40  39  40  39  40  42  45 140 135\r\n 162  79  43  44  45  53  52  42  44
+    \ 57  44  45  45  68 159 132\r\n 159 139  67 106 150 163 102  48  83 146 133 105
+    \ 78 139 166 131\r\n 148 156 160 165 170 142  92  63  81 125 157 163 161 167 167
+    134\r\n 137 148 156 161 164 162 168 160 160 152 158 160 163 165 165 130\r\n  88
+    \ 95  98 105 112 117 123 116 113 113 108 111 111 116 117  96\r\n\r\n  89  91  98
+    \ 96  96  93  87  85  88  91  94  89  86  91  85  69\r\n  97 106 108 108 107 109
+    106 109 108 103  98 107 107 112 113  84\r\n  98 105 104 107 107 108 108 105  98
+    \ 54  29  39  93 111 113  85\r\n  96 104 105 105 107 104  98  75  47  30  32  32
+    \ 46 109 111  81\r\n  97 104 107 106 106  78  33  32  31  33  32  30  68 109 109
+    \ 81\r\n  97 104 102 104 103  77  34  29  29  30  26  25  88 104 109  80\r\n  96
+    103 103 102  52  32  35  29  30  30  32  36  99  87 104  82\r\n 102  97  69  42
+    \ 29  60  61  36  31  31  30  32  57  52 105  81\r\n 106  81  45  32  37  88  98
+    \ 45  33  31  34  32  32  41 108  85\r\n 106 108 107  82  42  32  27  30  30  30
+    \ 33  36  67  59 112  90\r\n 107 113 111 115  98  42  36  33  29  31  33  32 106
+    \ 92 108  85\r\n 108 112 110 113 108  90  44  35  33  30  28  25  99 113 113  81\r\n
+    105 113 110 117 110  96  54  38  34  31  34  29  68 109 112  78\r\n 104 112 111
+    115 114 108 103 102  71  36  35  32  40 112 109  71\r\n 105 109 111 112 113 106
+    106 102  99  72  40  51  97 114 110  71\r\n  94 104 106 106 106 100 103 101  96
+    105 100 111 110 106 100  72\r\n 128 122 130 129 125 120 115 111 111 115 113 108
+    106 109 107  79\r\n 136 136 137 138 139 141 139 136 135 131 119 135 136 137 137
+    102\r\n 137 135 138 136 138 136 135 134 128  62  29  47 113 136 137 100\r\n 131
+    132 133 136 136 135 118  93  52  31  30  31  51 135 135  93\r\n 132 133 133 135
+    135  97  33  31  30  29  30  30  80 137 134  93\r\n 133 135 133 135 130  89  33
+    \ 30  29  28  28  28 107 134 133  94\r\n 135 136 135 128  62  32  30  30  30  28
+    \ 28  41 122 103 127  98\r\n 137 125  88  50  34  71  75  38  29  29  28  31  67
+    \ 57 136  97\r\n 148 106  56  37  40 114 122  54  29  30  29  30  34  39 132 102\r\n
+    150 149 144 107  41  32  28  30  29  30  29  39  84  70 142 109\r\n 147 148 147
+    148 127  49  31  29  30  30  30  34 141 118 139 103\r\n 146 149 146 145 145 118
+    \ 40  32  30  29  32  28 126 143 140  97\r\n 146 147 144 143 145 131  70  42  34
+    \ 32  31  33  85 139 138  91\r\n 147 145 143 144 142 140 139 132  89  35  33  33
+    \ 44 138 135  87\r\n 143 145 142 141 140 138 136 133 133  89  43  60 121 134 130
+    \ 86\r\n 131 135 135 137 134 134 129 129 130 136 132 144 137 132 124  81\r\n 146
+    141 149 148 144 141 136 132 132 135 135 132 131 134 130  96\r\n 157 164 163 163
+    164 166 165 164 161 150 140 159 166 167 165 117\r\n 156 160 158 161 161 161 158
+    156 142  77  45  68 139 167 165 116\r\n 152 156 158 161 156 152 135 106  65  42
+    \ 42  45  78 161 163 111\r\n 153 156 157 160 155 111  45  41  40  41  40  45 105
+    163 160 111\r\n 153 157 155 157 149 101  43  37  37  39  39  44 133 157 158 108\r\n
+    156 157 159 143  74  43  41  37  35  38  40  57 146 125 152 113\r\n 161 142 100
+    \ 59  45  88  89  48  38  40  39  44  83  81 160 113\r\n 169 124  69  45  53 131
+    138  65  39  39  40  42  48  63 160 116\r\n 178 173 165 122  54  44  41  41  39
+    \ 38  41  52 102  92 168 123\r\n 174 175 174 175 145  60  41  41  38  40  43  53
+    163 142 162 117\r\n 174 174 172 174 168 131  53  43  41  39  43  45 150 170 164
+    112\r\n 172 171 168 171 168 149  84  52  41  40  42  44 106 165 161 105\r\n 167
+    169 170 167 166 164 160 145 102  44  41  43  67 160 156  98\r\n 162 164 165 163
+    158 161 158 152 150 101  54  79 139 156 148  95\r\n 145 150 153 153 151 151 148
+    146 148 154 147 162 159 148 137  88\r\n\r\n  69  84  85  81  81  80  82  81  85
+    \ 90  85  81  78  71  71  72\r\n  85 113 113 111 109 109 104 105 108 112 108 113
+    112 109 110 100\r\n  91 112 111 109 109 104  87  52  41  59  92 113 109 112 114
+    106\r\n  86 107  93  46  68  88  99  57  32  67 106  99  68  40  97 110\r\n  89
+    107  39  32  30  25  36  32  32  36  32  25  29  32  51 111\r\n  94  98  29  32
+    \ 32  26  32  30  34  33  33  28  34  35  40 100\r\n  91 103  54  30  33  30  30
+    \ 31  31  30  31  30  31  36  72 105\r\n  88 108  98  47  31  29  30  31  33  30
+    \ 29  33  34  71  99  96\r\n  85 109 105  75  32  29  29  36  45  30  33  35  38
+    102 102 101\r\n  87 106 108  98  33  34  35  61  98  27  36  44  54 103 106 103\r\n
+    \ 93 109 108 104  78  77  32  60  88  32  42  90  96 108 106 100\r\n  96 107 107
+    107 106 103  52  29  37  42  98 108 110 114 113 106\r\n  96 108 107 105 106 104
+    102  42  32  82 115 113 117 115 112 106\r\n  98 108 104 105 107 102 103  69  45
+    107 111 110 110 111 111 106\r\n  91 106 105 104 104 104 103  97  81 108 113 112
+    113 112 109 104\r\n  89  97  98  96  97  97  96 102 106 106 107 108 105 104 105
+    \ 94\r\n  79 102 100  93  93  94  98  97 102 109 103  97  91  87  86  81\r\n 107
+    137 137 135 134 133 127 136 132 142 139 140 138 135 130 124\r\n 109 137 136 135
+    137 134 103  57  39  70 118 143 139 138 134 132\r\n 106 136 113  51  80 107 122
+    \ 67  34  84 141 126  85  44 121 137\r\n 108 135  47  31  30  28  41  31  30  39
+    \ 34  28  33  33  60 144\r\n 113 119  29  30  30  28  28  28  29  29  30  32  31
+    \ 33  43 132\r\n 115 131  62  31  29  28  28  29  30  30  30  29  32  35  89 136\r\n
+    111 135 128  52  30  29  30  29  29  29  30  30  34  89 133 130\r\n 111 136 134
+    \ 93  31  30  30  38  54  30  29  32  42 132 133 129\r\n 115 139 135 118  33  33
+    \ 30  75 122  28  31  40  70 139 136 129\r\n 120 141 136 135  97  89  32  71 114
+    \ 32  49 118 131 140 138 134\r\n 125 139 138 136 135 130  62  34  40  41 127 145
+    145 142 140 134\r\n 129 138 136 136 135 135 128  50  37 107 148 145 143 144 141
+    137\r\n 130 137 138 133 133 133 135  88  56 144 147 146 144 143 142 135\r\n 122
+    136 135 132 133 135 136 125 106 149 148 149 147 145 145 135\r\n 128 136 137 131
+    132 133 135 137 148 150 147 146 146 147 143 131\r\n  96 117 116 111 111 108 113
+    113 116 123 117 112 105  98  95  88\r\n 130 165 165 163 160 158 152 160 160 168
+    162 164 161 156 148 137\r\n 134 167 167 161 163 157 125  81  63  92 142 170 165
+    160 156 148\r\n 131 166 139  78 105 133 146  83  48 102 163 150 106  67 139 159\r\n
+    132 159  68  45  45  44  57  44  42  52  53  45  44  43  79 162\r\n 135 140  45
+    \ 42  40  39  40  39  40  41  43  43  42  41  54 147\r\n 135 150  77  42  41  39
+    \ 38  40  39  38  40  39  40  44 101 154\r\n 132 161 142  65  40  37  35  38  39
+    \ 39  38  41  41 102 150 148\r\n 132 164 156 106  41  37  37  48  65  41  41  43
+    \ 52 145 152 146\r\n 136 165 158 135  45  43  41  89 138  41  41  53  84 160 158
+    148\r\n 141 166 161 152 111 101  43  88 131  44  60 131 149 164 161 151\r\n 144
+    164 161 156 155 149  74  45  53  54 145 168 168 166 158 151\r\n 148 163 161 161
+    160 157 143  59  45 122 175 174 171 167 163 153\r\n 149 163 158 158 157 155 159
+    100  69 165 174 172 168 170 165 153\r\n 141 164 160 156 156 157 157 142 124 173
+    175 174 171 169 164 150\r\n 146 157 156 152 153 153 156 161 169 178 174 174 172
+    167 162 145\r\n\r\n  72 100 106 110 111 100 105  96 101 103 100 106 106 106 104
+    \ 94\r\n  71 110 114  97  51  40  72  99 102 106 106 113 112 111 109 105\r\n  71
+    109 112  40  32  35  36  71 102 103 108 114 115 111 112 104\r\n  78 112 109  68
+    \ 29  34  31  34  38  54  96 110 117 110 113 105\r\n  81 113 113  99  25  28  30
+    \ 33  35  44  90 108 113 110 112 108\r\n  85 108  92 106  32  33  31  29  33  36
+    \ 42  98 115 111 113 107\r\n  90 112  59  67  36  33  30  30  30  27  32  42  82
+    107 108 106\r\n  85 108  41  32  32  34  31  33  45  98  88  37  32  45  81 106\r\n
+    \ 81 105  52  57  32  30  31  31  36  61  60  29  42  69  97 102\r\n  82 104  87
+    \ 99  36  32  30  30  29  35  32  52 102 103 103  96\r\n  80 109 104  88  25  26
+    \ 30  29  29  34  77 103 104 102 104  97\r\n  81 109 109  68  30  32  33  31  32
+    \ 33  78 106 106 107 104  97\r\n  81 111 109  46  32  32  30  47  75  98 104 107
+    105 105 104  96\r\n  85 113 111  93  39  29  54  98 105 108 108 107 107 104 105
+    \ 98\r\n  84 113 112 107 107  98 103 108 109 106 109 107 108 108 106  97\r\n  69
+    \ 85  91  86  89  94  91  88  85  87  93  96  96  98  91  89\r\n  81 124 132 137
+    144 132 136 130 129 129 134 134 137 135 135 131\r\n  86 130 134 121  60  43  89
+    133 133 136 138 140 141 142 145 143\r\n  87 135 138  44  33  33  35  89 132 139
+    140 142 144 143 145 147\r\n  91 138 139  85  33  31  32  34  42  70 131 145 143
+    144 147 146\r\n  97 140 143 126  28  32  29  30  32  40 118 145 145 146 149 146\r\n
+    103 139 118 141  34  30  30  30  29  31  49 127 148 147 148 147\r\n 109 142  70
+    \ 84  39  29  30  29  30  28  32  41 107 144 149 150\r\n 102 132  39  34  30  29
+    \ 30  29  54 122 114  40  37  56 106 148\r\n  97 136  57  67  31  28  29  29  38
+    \ 75  71  34  50  88 125 137\r\n  98 127 103 122  41  28  28  30  30  30  32  62
+    128 135 136 135\r\n  94 133 134 107  28  28  28  29  30  33  89 130 135 133 135
+    133\r\n  93 134 137  80  30  30  29  30  31  33  97 135 135 133 133 132\r\n  93
+    135 135  51  31  30  31  52  93 118 135 136 136 133 132 131\r\n 100 137 136 113
+    \ 47  29  62 128 134 135 136 138 136 138 135 137\r\n 102 137 137 136 135 119 131
+    135 136 139 141 139 138 137 136 136\r\n  79 107 109 106 108 113 115 111 111 115
+    120 125 129 130 122 128\r\n  88 137 148 159 162 147 154 148 146 148 151 151 153
+    153 150 145\r\n  95 148 156 139  79  54 101 150 152 158 161 158 163 165 164 162\r\n
+    \ 98 156 160  67  43  41  44 102 145 160 164 166 167 170 169 167\r\n 105 161 165
+    106  44  42  40  41  52  84 149 168 171 168 171 172\r\n 112 164 170 150  45  43
+    \ 39  41  43  53 131 168 174 172 174 174\r\n 117 162 142 163  53  43  40  38  41
+    \ 41  60 145 175 174 175 174\r\n 123 168  92 102  52  41  38  39  41  41  44  54
+    122 165 173 178\r\n 116 160  63  48  42  40  39  39  65 138 131  53  45  69 124
+    169\r\n 113 160  81  83  44  39  40  38  48  89  88  45  59 100 142 161\r\n 113
+    152 125 146  57  40  38  35  37  41  43  74 143 159 157 156\r\n 108 158 157 133
+    \ 44  39  39  37  37  43 101 149 157 155 157 153\r\n 111 160 163 105  45  40  41
+    \ 40  41  45 111 155 160 157 156 153\r\n 111 163 161  78  45  42  42  65 106 135
+    152 156 161 158 156 152\r\n 116 165 167 139  68  45  77 142 156 158 161 161 161
+    158 160 156\r\n 117 165 167 166 159 140 150 161 164 165 166 164 163 163 164 157\r\n
+    \ 96 130 134 131 132 135 135 132 132 136 141 144 148 149 141 146\r\n\r\n"
+  PatternWidth: 0.08
+  BarcodeID: 0
+  MultiConfigFile: 
+  NFTDataName: 
+  currentUseContPoseEstimation: 0
+  currentFiltered: 0
+  currentFilterSampleRate: 30
+  currentFilterCutoffFreq: 15
+  currentNFTScale: 1
+--- !u!114 &1580157370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580157365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed68815202b64d4c956d71c0f176088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkerType: 0
+  Tag: kanji
+  PatternFilenameIndex: 3
+  PatternFilename: patt.kanji
+  PatternContents: " 214 225 240 225 214 240 216 204 214 227 181 192 198 192 181 192\n
+    240 240 240 240 240 240 225 232 240 240 240 240 240 240 240 236\n 240 240 240
+    240 240 240  75 128 220 240 240 240 240 240 240 240\n 240 240 240 240 240 240
+    106  53 240 240 240 240 240 240 240 237\n 240 240 240 240 240 238 118  31 240
+    240 240 240 240 240 240 234\n 240 240 240 240 240 240  74  49 207 240 240 240
+    240 240 240 240\n 240 240 240 240 240 240  53  54 177 240 240 240 240 240 240
+    240\n 240 240 240 240 240 240  64  31 130 240 240 240 240 240 240 219\n 240 240
+    240 240 240 180  37  57  78 228 240 240 240 240 240 240\n 240 240 240 240 240
+    118  62 157  36 185 240 240 240 240 240 231\n 240 240 240 240 240  82  65 225
+    \ 67  80 230 240 240 240 240 217\n 240 240 240 225  53  76 225 240 156  62 158
+    240 240 240 240 226\n 240 240 199  61   9 111 235 240 240 104  58 174 228 240
+    240 240\n 240 142  64  26  92 227 240 240 240 229  93  64 170 226 238 216\n  90
+    \ 26  12 156 240 240 240 240 240 240 204  95  30 117 192 200\n 156  16 195 233
+    235 240 236 240 238 239 240 186  93  53 120 237\n 214 226 240 225 212 240 216
+    204 212 226 181 192 198 192 185 194\n 240 240 240 240 240 240 227 232 240 240
+    240 240 240 240 240 238\n 240 240 240 240 240 240  95 138 225 240 240 240 240
+    240 240 240\n 240 240 240 240 240 240 108  59 240 240 240 240 240 240 240 237\n
+    240 240 240 240 240 238 118  31 240 240 240 240 240 240 240 234\n 240 240 240
+    240 240 240  83  47 207 240 240 240 240 240 240 240\n 240 240 240 240 240 240
+    \ 56  49 177 240 240 240 240 240 240 240\n 240 240 240 240 240 240  73  41 130
+    240 240 240 240 240 240 222\n 240 240 240 240 240 185  46  49  86 230 240 240
+    240 240 240 240\n 240 240 240 240 240 118  58 165  45 192 240 240 240 240 240
+    234\n 240 240 240 240 240  91  63 222  74  82 240 240 240 240 240 222\n 240 240
+    240 226  66  86 225 240 158  63 162 240 240 240 240 228\n 240 240 202  76  11
+    103 235 240 234  91  49 174 228 240 240 240\n 240 142  68  16  91 226 240 240
+    240 228  96  74 178 233 239 222\n  90  26   4 150 240 240 240 240 240 240 213
+    109  46 133 204 213\n 156  14 195 234 236 240 237 240 239 240 240 192 106  57
+    125 238\n 214 226 240 225 212 240 216 204 214 227 181 192 198 192 184 192\n 240
+    240 240 240 240 240 226 232 240 240 240 240 240 240 240 236\n 240 240 240 240
+    240 240  85 134 220 240 240 240 240 240 240 240\n 240 240 240 240 240 240 107
+    \ 58 240 240 240 240 240 240 240 237\n 240 240 240 240 240 238 118  32 240 240
+    240 240 240 240 240 234\n 240 240 240 240 240 240  87  60 210 240 240 240 240
+    240 240 240\n 240 240 240 240 240 240  58  58 178 240 240 240 240 240 240 240\n
+    240 240 240 240 240 240  73  31 130 240 240 240 240 240 240 219\n 240 240 240
+    240 240 185  46  59  86 228 240 240 240 240 240 240\n 240 240 240 240 240 118
+    \ 62 168  41 186 240 240 240 240 240 231\n 240 240 240 240 240  90  65 225  60
+    \ 92 235 240 240 240 240 219\n 240 240 240 225  53  82 225 240 146  63 163 240
+    240 240 240 228\n 240 240 198  61   5 103 235 240 234 102  58 175 232 240 240
+    240\n 240 134  54  13  91 226 240 240 240 229  96  68 188 238 239 222\n  90  15
+    \  3 150 240 240 240 240 240 240 213 105  48 134 204 213\n 156  14 195 233 236
+    240 237 240 239 239 240 192 106  57 125 238\n\n 192 236 240 237 234 240 240 219
+    240 231 217 226 240 216 200 237\n 181 240 240 240 240 240 240 240 240 240 240
+    240 240 238 192 120\n 192 240 240 240 240 240 240 240 240 240 240 240 240 226
+    117  53\n 198 240 240 240 240 240 240 240 240 240 240 240 228 170  30  93\n 192
+    240 240 240 240 240 240 240 240 240 240 240 174  64  95 186\n 181 240 240 240
+    240 240 240 240 240 240 230 158  58  93 204 240\n 227 240 240 240 240 240 240
+    240 228 185  80  62 104 229 240 239\n 214 240 220 240 240 207 177 130  78  36
+    \ 67 156 240 240 240 238\n 204 232 128  53  31  49  54  31  57 157 225 240 240
+    240 240 240\n 216 225  75 106 118  74  53  64  37  62  65 225 235 240 240 236\n
+    240 240 240 240 238 240 240 240 180 118  82  76 111 227 240 240\n 214 240 240
+    240 240 240 240 240 240 240 240  53   9  92 240 235\n 225 240 240 240 240 240
+    240 240 240 240 240 225  61  26 156 233\n 240 240 240 240 240 240 240 240 240
+    240 240 240 199  64  12 195\n 225 240 240 240 240 240 240 240 240 240 240 240
+    240 142  26  16\n 214 240 240 240 240 240 240 240 240 240 240 240 240 240  90
+    156\n 194 238 240 237 234 240 240 222 240 234 222 228 240 222 213 238\n 185 240
+    240 240 240 240 240 240 240 240 240 240 240 239 204 125\n 192 240 240 240 240
+    240 240 240 240 240 240 240 240 233 133  57\n 198 240 240 240 240 240 240 240
+    240 240 240 240 228 178  46 106\n 192 240 240 240 240 240 240 240 240 240 240
+    240 174  74 109 192\n 181 240 240 240 240 240 240 240 240 240 240 162  49  96
+    213 240\n 226 240 240 240 240 240 240 240 230 192  82  63  91 228 240 240\n 212
+    240 225 240 240 207 177 130  86  45  74 158 234 240 240 239\n 204 232 138  59
+    \ 31  47  49  41  49 165 222 240 240 240 240 240\n 216 227  95 108 118  83  56
+    \ 73  46  58  63 225 235 240 240 237\n 240 240 240 240 238 240 240 240 185 118
+    \ 91  86 103 226 240 240\n 212 240 240 240 240 240 240 240 240 240 240  66  11
+    \ 91 240 236\n 225 240 240 240 240 240 240 240 240 240 240 226  76  16 150 234\n
+    240 240 240 240 240 240 240 240 240 240 240 240 202  68   4 195\n 226 240 240
+    240 240 240 240 240 240 240 240 240 240 142  26  14\n 214 240 240 240 240 240
+    240 240 240 240 240 240 240 240  90 156\n 192 236 240 237 234 240 240 219 240
+    231 219 228 240 222 213 238\n 184 240 240 240 240 240 240 240 240 240 240 240
+    240 239 204 125\n 192 240 240 240 240 240 240 240 240 240 240 240 240 238 134
+    \ 57\n 198 240 240 240 240 240 240 240 240 240 240 240 232 188  48 106\n 192 240
+    240 240 240 240 240 240 240 240 240 240 175  68 105 192\n 181 240 240 240 240
+    240 240 240 240 240 235 163  58  96 213 240\n 227 240 240 240 240 240 240 240
+    228 186  92  63 102 229 240 239\n 214 240 220 240 240 210 178 130  86  41  60
+    146 234 240 240 239\n 204 232 134  58  32  60  58  31  59 168 225 240 240 240
+    240 240\n 216 226  85 107 118  87  58  73  46  62  65 225 235 240 240 237\n 240
+    240 240 240 238 240 240 240 185 118  90  82 103 226 240 240\n 212 240 240 240
+    240 240 240 240 240 240 240  53   5  91 240 236\n 225 240 240 240 240 240 240
+    240 240 240 240 225  61  13 150 233\n 240 240 240 240 240 240 240 240 240 240
+    240 240 198  54   3 195\n 226 240 240 240 240 240 240 240 240 240 240 240 240
+    134  15  14\n 214 240 240 240 240 240 240 240 240 240 240 240 240 240  90 156\n\n
+    237 120  53  93 186 240 239 238 240 236 240 235 233 195  16 156\n 200 192 117
+    \ 30  95 204 240 240 240 240 240 240 156  12  26  90\n 216 238 226 170  64  93
+    229 240 240 240 227  92  26  64 142 240\n 240 240 240 228 174  58 104 240 240
+    235 111   9  61 199 240 240\n 226 240 240 240 240 158  62 156 240 225  76  53
+    225 240 240 240\n 217 240 240 240 240 230  80  67 225  65  82 240 240 240 240
+    240\n 231 240 240 240 240 240 185  36 157  62 118 240 240 240 240 240\n 240 240
+    240 240 240 240 228  78  57  37 180 240 240 240 240 240\n 219 240 240 240 240
+    240 240 130  31  64 240 240 240 240 240 240\n 240 240 240 240 240 240 240 177
+    \ 54  53 240 240 240 240 240 240\n 240 240 240 240 240 240 240 207  49  74 240
+    240 240 240 240 240\n 234 240 240 240 240 240 240 240  31 118 238 240 240 240
+    240 240\n 237 240 240 240 240 240 240 240  53 106 240 240 240 240 240 240\n 240
+    240 240 240 240 240 240 220 128  75 240 240 240 240 240 240\n 236 240 240 240
+    240 240 240 240 232 225 240 240 240 240 240 240\n 192 181 192 198 192 181 227
+    214 204 216 240 214 225 240 225 214\n 238 125  57 106 192 240 240 239 240 237
+    240 236 234 195  14 156\n 213 204 133  46 109 213 240 240 240 240 240 240 150
+    \  4  26  90\n 222 239 233 178  74  96 228 240 240 240 226  91  16  68 142 240\n
+    240 240 240 228 174  49  91 234 240 235 103  11  76 202 240 240\n 228 240 240
+    240 240 162  63 158 240 225  86  66 226 240 240 240\n 222 240 240 240 240 240
+    \ 82  74 222  63  91 240 240 240 240 240\n 234 240 240 240 240 240 192  45 165
+    \ 58 118 240 240 240 240 240\n 240 240 240 240 240 240 230  86  49  46 185 240
+    240 240 240 240\n 222 240 240 240 240 240 240 130  41  73 240 240 240 240 240
+    240\n 240 240 240 240 240 240 240 177  49  56 240 240 240 240 240 240\n 240 240
+    240 240 240 240 240 207  47  83 240 240 240 240 240 240\n 234 240 240 240 240
+    240 240 240  31 118 238 240 240 240 240 240\n 237 240 240 240 240 240 240 240
+    \ 59 108 240 240 240 240 240 240\n 240 240 240 240 240 240 240 225 138  95 240
+    240 240 240 240 240\n 238 240 240 240 240 240 240 240 232 227 240 240 240 240
+    240 240\n 194 185 192 198 192 181 226 212 204 216 240 212 225 240 226 214\n 238
+    125  57 106 192 240 239 239 240 237 240 236 233 195  14 156\n 213 204 134  48
+    105 213 240 240 240 240 240 240 150   3  15  90\n 222 239 238 188  68  96 229
+    240 240 240 226  91  13  54 134 240\n 240 240 240 232 175  58 102 234 240 235
+    103   5  61 198 240 240\n 228 240 240 240 240 163  63 146 240 225  82  53 225
+    240 240 240\n 219 240 240 240 240 235  92  60 225  65  90 240 240 240 240 240\n
+    231 240 240 240 240 240 186  41 168  62 118 240 240 240 240 240\n 240 240 240
+    240 240 240 228  86  59  46 185 240 240 240 240 240\n 219 240 240 240 240 240
+    240 130  31  73 240 240 240 240 240 240\n 240 240 240 240 240 240 240 178  58
+    \ 58 240 240 240 240 240 240\n 240 240 240 240 240 240 240 210  60  87 240 240
+    240 240 240 240\n 234 240 240 240 240 240 240 240  32 118 238 240 240 240 240
+    240\n 237 240 240 240 240 240 240 240  58 107 240 240 240 240 240 240\n 240 240
+    240 240 240 240 240 220 134  85 240 240 240 240 240 240\n 236 240 240 240 240
+    240 240 240 232 226 240 240 240 240 240 240\n 192 184 192 198 192 181 227 214
+    204 216 240 212 225 240 226 214\n\n 156  90 240 240 240 240 240 240 240 240 240
+    240 240 240 240 214\n  16  26 142 240 240 240 240 240 240 240 240 240 240 240
+    240 225\n 195  12  64 199 240 240 240 240 240 240 240 240 240 240 240 240\n 233
+    156  26  61 225 240 240 240 240 240 240 240 240 240 240 225\n 235 240  92   9
+    \ 53 240 240 240 240 240 240 240 240 240 240 214\n 240 240 227 111  76  82 118
+    180 240 240 240 238 240 240 240 240\n 236 240 240 235 225  65  62  37  64  53
+    \ 74 118 106  75 225 216\n 240 240 240 240 240 225 157  57  31  54  49  31  53
+    128 232 204\n 238 240 240 240 156  67  36  78 130 177 207 240 240 220 240 214\n
+    239 240 229 104  62  80 185 228 240 240 240 240 240 240 240 227\n 240 204  93
+    \ 58 158 230 240 240 240 240 240 240 240 240 240 181\n 186  95  64 174 240 240
+    240 240 240 240 240 240 240 240 240 192\n  93  30 170 228 240 240 240 240 240
+    240 240 240 240 240 240 198\n  53 117 226 240 240 240 240 240 240 240 240 240
+    240 240 240 192\n 120 192 238 240 240 240 240 240 240 240 240 240 240 240 240
+    181\n 237 200 216 240 226 217 231 240 219 240 240 234 237 240 236 192\n 156  90
+    240 240 240 240 240 240 240 240 240 240 240 240 240 214\n  14  26 142 240 240
+    240 240 240 240 240 240 240 240 240 240 226\n 195   4  68 202 240 240 240 240
+    240 240 240 240 240 240 240 240\n 234 150  16  76 226 240 240 240 240 240 240
+    240 240 240 240 225\n 236 240  91  11  66 240 240 240 240 240 240 240 240 240
+    240 212\n 240 240 226 103  86  91 118 185 240 240 240 238 240 240 240 240\n 237
+    240 240 235 225  63  58  46  73  56  83 118 108  95 227 216\n 240 240 240 240
+    240 222 165  49  41  49  47  31  59 138 232 204\n 239 240 240 234 158  74  45
+    \ 86 130 177 207 240 240 225 240 212\n 240 240 228  91  63  82 192 230 240 240
+    240 240 240 240 240 226\n 240 213  96  49 162 240 240 240 240 240 240 240 240
+    240 240 181\n 192 109  74 174 240 240 240 240 240 240 240 240 240 240 240 192\n
+    106  46 178 228 240 240 240 240 240 240 240 240 240 240 240 198\n  57 133 233
+    240 240 240 240 240 240 240 240 240 240 240 240 192\n 125 204 239 240 240 240
+    240 240 240 240 240 240 240 240 240 185\n 238 213 222 240 228 222 234 240 222
+    240 240 234 237 240 238 194\n 156  90 240 240 240 240 240 240 240 240 240 240
+    240 240 240 214\n  14  15 134 240 240 240 240 240 240 240 240 240 240 240 240
+    226\n 195   3  54 198 240 240 240 240 240 240 240 240 240 240 240 240\n 233 150
+    \ 13  61 225 240 240 240 240 240 240 240 240 240 240 225\n 236 240  91   5  53
+    240 240 240 240 240 240 240 240 240 240 212\n 240 240 226 103  82  90 118 185
+    240 240 240 238 240 240 240 240\n 237 240 240 235 225  65  62  46  73  58  87
+    118 107  85 226 216\n 240 240 240 240 240 225 168  59  31  58  60  32  58 134
+    232 204\n 239 240 240 234 146  60  41  86 130 178 210 240 240 220 240 214\n 239
+    240 229 102  63  92 186 228 240 240 240 240 240 240 240 227\n 240 213  96  58
+    163 235 240 240 240 240 240 240 240 240 240 181\n 192 105  68 175 240 240 240
+    240 240 240 240 240 240 240 240 192\n 106  48 188 232 240 240 240 240 240 240
+    240 240 240 240 240 198\n  57 134 238 240 240 240 240 240 240 240 240 240 240
+    240 240 192\n 125 204 239 240 240 240 240 240 240 240 240 240 240 240 240 184\n
+    238 213 222 240 228 219 231 240 219 240 240 234 237 240 236 192\n\n"
+  PatternWidth: 0.08
+  BarcodeID: 0
+  MultiConfigFile: 
+  NFTDataName: 
+  currentUseContPoseEstimation: 0
+  currentFiltered: 0
+  currentFilterSampleRate: 30
+  currentFilterCutoffFreq: 15
+  currentNFTScale: 1
+--- !u!114 &1580157371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580157365}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe4ec33cee90c844ea1bcc2cd642033e, type: 3}
@@ -848,19 +1470,6 @@ MonoBehaviour:
   currentNFTMultiMode: 0
   currentLogLevel: 1
   scrollPosition: {x: 0, y: 0}
---- !u!4 &1580157368
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1580157365}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!114 &1640580453 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000014246570068, guid: 894180ca22a593f48a364acd536bbc21,
@@ -871,9 +1480,9 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 1000010161318822, guid: dc6a4c2c3ba230143beff36ff63c58a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1290667133}
+  m_PrefabInternal: {fileID: 1289697945}
 --- !u!4 &1909080205 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012963206212, guid: dc6a4c2c3ba230143beff36ff63c58a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1290667133}
+  m_PrefabInternal: {fileID: 1289697945}

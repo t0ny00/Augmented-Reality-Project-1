@@ -47,7 +47,7 @@ public class ARTrackedObject : MonoBehaviour
 	private AROrigin _origin = null;
 	private ARMarker _marker = null;
 
-	private bool visible = false;					// Current visibility from tracking
+	public bool visible = false;					// Current visibility from tracking
 	private float timeTrackingLost = 0;				// Time when tracking was last lost
 	public float secondsToRemainVisible = 0.0f;		// How long to remain visible after tracking is lost (to reduce flicker)
 	private bool visibleOrRemain = false;			// Whether to show the content (based on above variables)

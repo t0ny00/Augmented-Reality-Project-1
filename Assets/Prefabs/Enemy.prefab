@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010793049272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.659447, y: -1.1500076, z: -6.055468}
+  m_LocalPosition: {x: 6.5559773, y: -5.1155987, z: 4.384956}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f66e8272f1904d84280cb6df9072dc38, type: 2}
+  - {fileID: 2100000, guid: d75a091b90c9baf479b1eb66342d284f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -79,7 +79,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010793049272}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300026, guid: a28592095d50cf843a8f998aa981170d, type: 3}
 --- !u!54 &54000011729912118
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -93,7 +93,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &65000010627269000
 BoxCollider:
@@ -105,8 +105,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.413216, y: 2.6703556, z: 0.99999976}
-  m_Center: {x: -0.014792048, y: 0.8351795, z: 0}
+  m_Size: {x: 1.413216, y: 2.0037796, z: 0.99999976}
+  m_Center: {x: -0.014792048, y: 0.5018935, z: 0}
 --- !u!114 &114000012199225336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnerable: 0
-  speed: 10
+  speed: 5
   bullet: {fileID: 0}
   health: 1
   arOrientation: 1

@@ -21,33 +21,41 @@ public class Spawn : MonoBehaviour {
 
     void SpawnEnemy()
     {
-        float minX = limit_left.transform.position.x;
-        float maxX = limit_right.transform.position.x;
-        float height = limit_height.transform.TransformPoint( transform.position).y;
-        int waves = Random.Range(0, max_waves);
-        GameObject enemy_temp;
-        Vector3 spawnPosition;
-        int enemyNumber;
-
-        float prob = Random.value;
-
-        if (prob < 0.5) enemyNumber = 0;
-        else if (prob < 0.7) enemyNumber = 1;
-        else enemyNumber = 2;
-
-        for (int i = 0; i <= waves; i++)
+        if (isActiveAndEnabled)
         {
+            float minX = limit_left.transform.position.x;
+            float maxX = limit_right.transform.position.x;
+            float height = limit_height.transform.TransformPoint(transform.position).y;
+            int waves = Random.Range(0, max_waves);
+            GameObject enemy_temp;
+            Vector3 spawnPosition;
 
-            if (enemyNumber == 0 || enemyNumber == 2) spawnPosition.x = transform.position.x + Random.Range(minX, maxX);
-            else spawnPosition.x = transform.position.x + Random.Range(minX + transform.TransformPoint(-0.5f,0f,0f).x, maxX - transform.TransformPoint(0.5f, 0f, 0f).x);
-            spawnPosition.y = height;
-            spawnPosition.z = limit_height.transform.position.z;
-            //if (enemyNumber == 0) spawnPosition.y -= transform.TransformPoint(1f, 0f, 0f).x ; 
+            int enemyNumber;
+
+            float prob = Random.value;
+
+            if (prob < 0.5) enemyNumber = 0;
+            else if (prob < 0.7) enemyNumber = 1;
+            else enemyNumber = 2;
+
+            for (int i = 0; i <= waves; i++)
+            {
+
+                if (enemyNumber == 0 || enemyNumber == 2) spawnPosition.x = transform.position.x + Random.Range(minX, maxX);
+                else
+                {
+                    spawnPosition.x = transform.position.x + Random.Range(minX + 0.05f, maxX - 0.05f);
+                }
+                spawnPosition.y = height;
+                spawnPosition.z = limit_height.transform.position.z;
+                //if (enemyNumber == 0) spawnPosition.y -= transform.TransformPoint(1f, 0f, 0f).x ; 
 
 
-            enemy_temp = (GameObject)Instantiate(enemy[enemyNumber], spawnPosition, new Quaternion(0,0,0,0),transform.parent);
-            enemy_temp.layer = gameObject.layer;
-            if (enemyNumber == 1) break;
+                enemy_temp = (GameObject)Instantiate(enemy[enemyNumber], spawnPosition, new Quaternion(0, 0, 0, 0), transform.parent);
+                enemy_temp.layer = gameObject.layer;
+                if (enemyNumber == 1) break;
+
+            }
         }
     }
 }

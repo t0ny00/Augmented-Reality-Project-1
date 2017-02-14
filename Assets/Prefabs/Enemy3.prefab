@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013482107526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9203433, y: -104.034164, z: -6.176078}
+  m_LocalPosition: {x: 3.1047754, y: 1.7653189, z: 0.05198002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -125,7 +125,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &65000013102430972
 BoxCollider:
@@ -137,8 +137,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.227538, y: 3.5159626, z: 4.8354645}
-  m_Center: {x: 0.00031280518, y: 0.742012, z: 0.4612236}
+  m_Size: {x: 3.227538, y: 5.774188, z: 4.8354645}
+  m_Center: {x: 0.00031280518, y: 1.8711257, z: 0.4612236}
 --- !u!114 &114000011107711728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnerable: 0
-  speed: 10
+  speed: 7
   bullet: {fileID: 0}
   health: 3
   arOrientation: 1

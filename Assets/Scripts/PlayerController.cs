@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour {
     public AudioSource soundExplosion;
     public ParticleSystem leftFlame;
     public ParticleSystem rightFlame;
+    private bool reloading = false;
+    public GameObject mark;
     // Use this for initialization
     void Start () {
         render = GetComponent<Renderer>();
@@ -39,9 +41,9 @@ public class PlayerController : MonoBehaviour {
         transform.Translate(x, 0, z);
 
 
-        if (Input.GetKey("space"))
+        if (mark.GetComponent<ARTrackedObject>().visible)
         {
-            if (fire_timer >= fire_rate && bulletCounter > 0) 
+            if (fire_timer >= fire_rate && bulletCounter > 0)
             {
                 Shoot();
                 fire_timer = 0;
@@ -49,7 +51,11 @@ public class PlayerController : MonoBehaviour {
                 bulletCounterText.text = "Bullets: " + bulletCounter.ToString();
                 timeSinceLastShot = Time.time;
             }
-            else if (bulletCounter == 0) StartCoroutine("Reload",reloadSpeed);
+            else if (bulletCounter == 0 && !reloading)
+            {
+                reloading = true;
+                StartCoroutine("Reload", reloadSpeed);
+            }
         }
 
         if (Time.time - timeSinceLastShot > 1.5 && bulletCounter > 0) StartCoroutine("Reload", 0);
@@ -83,10 +89,13 @@ public class PlayerController : MonoBehaviour {
 
     void Shoot()
     {
-        Transform parent = GameObject.FindGameObjectsWithTag("Floor")[0].transform;
-        Instantiate(bullet, cannon1.transform.position,new  Quaternion(0,0,0,0),parent);
-        Instantiate(bullet, cannon2.transform.position, new Quaternion(0, 0, 0, 0), parent);
-        sound.Play();
+        GameObject[] parent = GameObject.FindGameObjectsWithTag("Floor");
+        if (parent.Length > 0)
+        {
+            Instantiate(bullet, cannon1.transform.position, new Quaternion(0, 0, 0, 0), parent[0].transform);
+            Instantiate(bullet, cannon2.transform.position, new Quaternion(0, 0, 0, 0), parent[0].transform);
+            sound.Play();
+        }
         
     }
 
@@ -114,5 +123,6 @@ public class PlayerController : MonoBehaviour {
         yield return new WaitForSecondsRealtime(reloadSpeed);
         bulletCounter = numBullets;
         bulletCounterText.text = "Bullets: " + bulletCounter.ToString();
+        reloading = false;
     }
 }
