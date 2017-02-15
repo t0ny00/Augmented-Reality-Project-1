@@ -8,7 +8,7 @@ public class Spawn : MonoBehaviour {
     public GameObject limit_left;
     public GameObject limit_right;
     public GameObject limit_height;
-
+    
     // Use this for initialization
     void Start () {
         

@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
         transform.Translate(x, 0, z);
 
 
-        if (mark.GetComponent<ARTrackedObject>().visible)
+        if (!mark.GetComponent<ARTrackedObject>().visible)
         {
             if (fire_timer >= fire_rate && bulletCounter > 0)
             {

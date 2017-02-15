@@ -12,6 +12,7 @@ TagManager:
   - Controller
   - Enemy
   - Bullet
+  - Limit
   layers:
   - Default
   - TransparentFX

@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour {
         if (randomDirection) direction += new Vector3(Random.Range(-0.5f, 0.5f), 0, 0);
         rb = GetComponent<Rigidbody>();
         rb.AddForce(direction * speed);
+        
 
     }
 	 
